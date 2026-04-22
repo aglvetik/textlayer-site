@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TextLayer - Local OCR Overlay for Windows</title>
+  <meta name="description" content="TextLayer is a local Windows OCR utility for selecting and copying text from images shown in other apps.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="TextLayer home">
+      <span class="brand-mark">TL</span>
+      <span>TextLayer</span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#features">Features</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#download">Download</a>
+      <a href="https://github.com/OWNER/TextLayer">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Local OCR utility for Windows</p>
+        <h1>Select text from images in the apps you already use.</h1>
+        <p class="lead">
+          TextLayer runs in the tray. Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd>,
+          capture an image region, then select and copy recognized text from the overlay.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#download">Download for Windows</a>
+          <a class="button secondary" href="https://github.com/OWNER/TextLayer">View source</a>
+        </div>
+      </div>
+      <div class="preview-card" aria-label="Screenshot placeholder">
+        <div class="window-bar">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="preview-content">
+          <p class="preview-title">OCR overlay</p>
+          <div class="text-line wide"></div>
+          <div class="text-line medium selected"></div>
+          <div class="text-line narrow"></div>
+          <p class="preview-note">Screenshot space reserved for the first public release.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">What it does</p>
+        <h2>Text extraction without plugins or cloud OCR.</h2>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <h3>Works over other apps</h3>
+          <p>Capture text from screenshots, chat images, browser images, and image viewers with a region overlay.</p>
+        </article>
+        <article class="card">
+          <h3>Selectable overlay</h3>
+          <p>Hover recognized words, drag-select text, use <kbd>Ctrl</kbd> + <kbd>A</kbd>, and copy with <kbd>Ctrl</kbd> + <kbd>C</kbd>.</p>
+        </article>
+        <article class="card">
+          <h3>Tray-first workflow</h3>
+          <p>TextLayer stays in the notification area and is ready when you need OCR, with near-zero idle activity.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="workflow" class="section split">
+      <div>
+        <p class="eyebrow">How it works</p>
+        <h2>Three steps.</h2>
+      </div>
+      <ol class="steps">
+        <li><strong>Launch TextLayer.</strong> It starts as a tray app.</li>
+        <li><strong>Press Ctrl+Shift+O.</strong> Drag over the image region you want to OCR.</li>
+        <li><strong>Select and copy.</strong> Use the overlay like a text layer and close it with Esc.</li>
+      </ol>
+    </section>
+
+    <section class="section privacy">
+      <p class="eyebrow">Privacy</p>
+      <h2>OCR stays local.</h2>
+      <p>
+        TextLayer uses local Windows OCR and local Tesseract OCR assets. Captured images are not sent to a server,
+        and there is no telemetry or cloud fallback.
+      </p>
+    </section>
+
+    <section id="download" class="section download">
+      <div>
+        <p class="eyebrow">Download</p>
+        <h2>Windows installer</h2>
+        <p>
+          The installer will be hosted on GitHub Releases. Replace the placeholder owner/repository URL before publishing
+          the public site.
+        </p>
+      </div>
+      <a class="button primary download-button"
+         href="https://github.com/aglvetik/TextLayer/releases/download/v0.1.0/TextLayer-Setup-0.1.0.exe">
+        Download TextLayer Setup
+      </a>
+      <p class="download-note">Placeholder release URL. Intended artifact: <code>TextLayer-Setup-0.1.0.exe</code>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>TextLayer</span>
+    <a href="https://github.com/OWNER/TextLayer">GitHub repository</a>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
