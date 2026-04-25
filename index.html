@@ -3,33 +3,33 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TextLayer — локальное OCR для Windows</title>
+  <title>TextLayer &mdash; local OCR for Windows</title>
   <meta
     name="description"
-    content="TextLayer помогает выделять и копировать текст с изображений на экране. OCR работает локально на Windows."
+    content="TextLayer helps you select and copy text from images on your screen. OCR runs locally on Windows."
   >
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main-content" data-i18n="accessibility.skip">Перейти к содержимому</a>
+  <a class="skip-link" href="#main-content" data-i18n="common.skip">Skip to content</a>
 
   <header class="site-header">
-    <div class="container header-row">
-      <p class="wordmark" data-i18n="brand.wordmark">TextLayer</p>
+    <div class="container header-inner">
+      <div class="brand" data-i18n="brand.text">TextLayer</div>
 
       <div
         class="language-switcher"
         role="group"
-        aria-label="Переключатель языка"
-        data-i18n-aria-label="accessibility.languageSwitcher"
+        aria-label="Language switcher"
+        data-i18n-aria-label="common.languageSwitcher"
       >
         <button
           type="button"
           class="lang-button"
           data-lang="ru"
-          aria-label="Переключить язык на русский"
+          aria-label="Switch language to Russian"
           data-i18n="lang.ru"
-          data-i18n-aria-label="accessibility.switchToRu"
+          data-i18n-aria-label="common.switchToRu"
           aria-pressed="false"
         >
           RU
@@ -40,7 +40,7 @@
           data-lang="en"
           aria-label="Switch language to English"
           data-i18n="lang.en"
-          data-i18n-aria-label="accessibility.switchToEn"
+          data-i18n-aria-label="common.switchToEn"
           aria-pressed="false"
         >
           EN
@@ -49,89 +49,102 @@
     </div>
   </header>
 
-  <main id="main-content">
-    <section class="hero section">
-      <div class="container hero-content">
-        <h1 data-i18n="hero.title">Копируй текст с изображений на экране.</h1>
-        <p class="lead" data-i18n="hero.subtitle">
-          Нажми Ctrl + Shift + O, выдели область и скопируй распознанный текст из удобного оверлея.
-        </p>
-        <a
-          class="button button-primary"
-          href="https://github.com/aglvetik/TextLayer/releases/download/v0.1.1/TextLayer-Setup-0.1.1.exe"
-          aria-label="Скачать TextLayer для Windows"
-          data-i18n="hero.download"
-          data-i18n-aria-label="accessibility.download"
-        >
-          Скачать для Windows
-        </a>
-        <p class="trust-line" data-i18n="hero.trust">Локальное OCR · Без облака · Windows</p>
+  <main id="main-content" class="site-main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 class="hero-title" data-i18n="hero.title">Copy text from images on your screen</h1>
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
+            Press Ctrl + Shift + O, select an area, and copy recognized text from a clean overlay.
+          </p>
+
+          <div class="hero-actions">
+            <a
+              class="button button-primary"
+              href="https://github.com/aglvetik/TextLayer/releases/download/v0.1.1/TextLayer-Setup-0.1.1.exe"
+              aria-label="Download TextLayer for Windows"
+              data-i18n="common.download"
+              data-i18n-aria-label="common.downloadAria"
+            >
+              Download for Windows
+            </a>
+          </div>
+
+          <p class="hero-trust" data-i18n="hero.trust">Local OCR &middot; No cloud &middot; Windows</p>
+        </div>
+
+        <aside class="summary-panel">
+          <p class="summary-title" data-i18n="panel.title">Quick workflow</p>
+          <ul class="summary-steps">
+            <li data-i18n="panel.step1">Ctrl + Shift + O</li>
+            <li data-i18n="panel.step2">Select an area</li>
+            <li data-i18n="panel.step3">Copy text</li>
+          </ul>
+        </aside>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="features-title">
+    <section class="section">
       <div class="container">
-        <h2 id="features-title" class="sr-only" data-i18n="features.heading">Основные возможности</h2>
-        <div class="feature-row">
-          <article class="feature">
-            <h3 data-i18n="features.hotkey.title">Горячая клавиша</h3>
-            <p data-i18n="features.hotkey.text">Быстрый запуск через Ctrl + Shift + O</p>
+        <div class="section-heading">
+          <h2 class="section-title" data-i18n="features.title">Features</h2>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3 data-i18n="features.items.hotkey.title">Hotkey</h3>
+            <p data-i18n="features.items.hotkey.text">Start recognition with one keyboard shortcut.</p>
           </article>
-          <article class="feature">
-            <h3 data-i18n="features.capture.title">Выделение области</h3>
-            <p data-i18n="features.capture.text">Распознавание только выбранной части экрана</p>
+
+          <article class="feature-card">
+            <h3 data-i18n="features.items.region.title">Region capture</h3>
+            <p data-i18n="features.items.region.text">Recognize only the part of the screen you need.</p>
           </article>
-          <article class="feature">
-            <h3 data-i18n="features.copy.title">Копирование текста</h3>
-            <p data-i18n="features.copy.text">Выделяй и копируй результат как обычный текст</p>
+
+          <article class="feature-card">
+            <h3 data-i18n="features.items.copy.title">Normal copying</h3>
+            <p data-i18n="features.items.copy.text">Select and copy the result like regular text.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="how-title">
-      <div class="container narrow">
-        <h2 id="how-title" class="section-title" data-i18n="how.title">Как это работает</h2>
-        <ol class="steps">
-          <li data-i18n="how.step1">Нажми Ctrl + Shift + O</li>
-          <li data-i18n="how.step2">Выдели область на экране</li>
-          <li data-i18n="how.step3">Скопируй распознанный текст</li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="privacy-title">
-      <div class="container narrow">
-        <h2 id="privacy-title" class="section-title" data-i18n="privacy.title">Приватность</h2>
-        <p class="section-text" data-i18n="privacy.text">
-          TextLayer распознаёт текст локально на компьютере. Изображения не отправляются на сервер, облачная обработка и телеметрия не используются.
-        </p>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="download-title">
-      <div class="container download-block">
-        <div class="download-copy">
-          <h2 id="download-title" class="section-title" data-i18n="download.title">Скачать TextLayer</h2>
-          <p class="section-text" data-i18n="download.note">Установщик для Windows · v0.1.1</p>
+    <section class="section">
+      <div class="container">
+        <div class="privacy-block">
+          <h2 class="section-title" data-i18n="privacy.title">Privacy</h2>
+          <p class="section-text" data-i18n="privacy.text">
+            TextLayer recognizes text locally on your computer. Images are not uploaded to a server, and there is no cloud processing or telemetry.
+          </p>
         </div>
-        <a
-          class="button button-primary"
-          href="https://github.com/aglvetik/TextLayer/releases/download/v0.1.1/TextLayer-Setup-0.1.1.exe"
-          aria-label="Скачать TextLayer для Windows"
-          data-i18n="download.button"
-          data-i18n-aria-label="accessibility.download"
-        >
-          Скачать для Windows
-        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="download-block">
+          <div class="download-copy">
+            <h2 class="section-title" data-i18n="download.title">Download TextLayer</h2>
+            <p class="section-text" data-i18n="download.note">Windows installer &middot; v0.1.1</p>
+          </div>
+
+          <a
+            class="button button-primary"
+            href="https://github.com/aglvetik/TextLayer/releases/download/v0.1.1/TextLayer-Setup-0.1.1.exe"
+            aria-label="Download TextLayer for Windows"
+            data-i18n="common.download"
+            data-i18n-aria-label="common.downloadAria"
+          >
+            Download for Windows
+          </a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-row">
-      <p class="footer-name" data-i18n="brand.wordmark">TextLayer</p>
-      <p class="footer-text" data-i18n="footer.line">Локальное распознавание без отправки изображений на сервер.</p>
+    <div class="container footer-inner">
+      <p class="footer-text" data-i18n="footer.text">TextLayer &middot; local recognition without uploading images to a server.</p>
     </div>
   </footer>
 
