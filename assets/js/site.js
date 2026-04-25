@@ -6,75 +6,177 @@
   var translations = {
     ru: {
       meta: {
-        title: "TextLayer \u2014 \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u043e\u0435 OCR \u0434\u043b\u044f Windows",
-        description: "TextLayer \u043f\u043e\u043c\u043e\u0433\u0430\u0435\u0442 \u0432\u044b\u0434\u0435\u043b\u044f\u0442\u044c \u0438 \u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0442\u0435\u043a\u0441\u0442 \u0441 \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0439 \u043d\u0430 \u044d\u043a\u0440\u0430\u043d\u0435. OCR \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442 \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u043e \u043d\u0430 Windows."
+        title: "TextLayer — локальное OCR для Windows",
+        description: "TextLayer помогает выделять область экрана, распознавать текст локально и копировать результат как обычный текст."
       },
       common: {
-        skip: "\u041f\u0435\u0440\u0435\u0439\u0442\u0438 \u043a \u0441\u043e\u0434\u0435\u0440\u0436\u0438\u043c\u043e\u043c\u0443",
-        languageSwitcher: "\u041f\u0435\u0440\u0435\u043a\u043b\u044e\u0447\u0430\u0442\u0435\u043b\u044c \u044f\u0437\u044b\u043a\u0430",
-        switchToRu: "\u041f\u0435\u0440\u0435\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u044f\u0437\u044b\u043a \u043d\u0430 \u0440\u0443\u0441\u0441\u043a\u0438\u0439",
-        switchToEn: "\u041f\u0435\u0440\u0435\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u044f\u0437\u044b\u043a \u043d\u0430 \u0430\u043d\u0433\u043b\u0438\u0439\u0441\u043a\u0438\u0439",
-        download: "\u0421\u043a\u0430\u0447\u0430\u0442\u044c \u0434\u043b\u044f Windows",
-        downloadAria: "\u0421\u043a\u0430\u0447\u0430\u0442\u044c TextLayer \u0434\u043b\u044f Windows"
+        skip: "Перейти к содержимому",
+        homeAria: "Перейти к началу страницы TextLayer",
+        navAria: "Основная навигация",
+        languageSwitcher: "Переключатель языка",
+        switchToRu: "Переключить язык на русский",
+        switchToEn: "Переключить язык на английский",
+        github: "GitHub",
+        githubAria: "Открыть репозиторий TextLayer на GitHub",
+        sourceAria: "Открыть исходный код TextLayer на GitHub",
+        downloadAria: "Скачать TextLayer для Windows"
       },
       lang: {
         ru: "RU",
         en: "EN"
       },
       brand: {
-        text: "TextLayer"
+        name: "TextLayer",
+        subtitle: "Локальное OCR для Windows"
+      },
+      nav: {
+        overview: "Обзор",
+        features: "Возможности",
+        privacy: "Приватность",
+        download: "Скачать"
       },
       hero: {
-        title: "\u041a\u043e\u043f\u0438\u0440\u0443\u0439 \u0442\u0435\u043a\u0441\u0442 \u0441 \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0439 \u043d\u0430 \u044d\u043a\u0440\u0430\u043d\u0435",
-        subtitle: "\u041d\u0430\u0436\u043c\u0438 Ctrl + Shift + O, \u0432\u044b\u0434\u0435\u043b\u0438 \u043e\u0431\u043b\u0430\u0441\u0442\u044c \u0438 \u0441\u043a\u043e\u043f\u0438\u0440\u0443\u0439 \u0440\u0430\u0441\u043f\u043e\u0437\u043d\u0430\u043d\u043d\u044b\u0439 \u0442\u0435\u043a\u0441\u0442 \u0438\u0437 \u0443\u0434\u043e\u0431\u043d\u043e\u0433\u043e \u043e\u0432\u0435\u0440\u043b\u0435\u044f.",
-        trust: "\u041b\u043e\u043a\u0430\u043b\u044c\u043d\u043e\u0435 OCR \u00b7 \u0411\u0435\u0437 \u043e\u0431\u043b\u0430\u043a\u0430 \u00b7 Windows"
+        label: "OCR-утилита для Windows",
+        title: "Копируй текст с изображений на экране",
+        text: "TextLayer помогает выделять область экрана, распознавать текст локально и копировать результат как обычный текст.",
+        download: "Скачать для Windows",
+        github: "Посмотреть исходный код",
+        meta: "Windows · Локальное OCR · Без загрузки в облако"
       },
-      panel: {
-        title: "\u0411\u044b\u0441\u0442\u0440\u044b\u0439 \u0441\u0446\u0435\u043d\u0430\u0440\u0438\u0439",
-        step1: "Ctrl + Shift + O",
-        step2: "\u0412\u044b\u0434\u0435\u043b\u0438 \u043e\u0431\u043b\u0430\u0441\u0442\u044c",
-        step3: "\u0421\u043a\u043e\u043f\u0438\u0440\u0443\u0439 \u0442\u0435\u043a\u0441\u0442"
+      mockup: {
+        aria: "Макет приложения TextLayer",
+        menu: {
+          capture: "Захват",
+          ocr: "OCR",
+          settings: "Настройки"
+        },
+        heading: "Захват текста с экрана",
+        previewNote: "Выбранная область",
+        textLabel: "Распознанный текст",
+        sampleText: "Пример текста готов к копированию",
+        copyButton: "Копировать текст"
+      },
+      workflow: {
+        step1: "Открой изображение или скриншот",
+        step2: "Выдели область экрана",
+        step3: "TextLayer выполнит локальное OCR",
+        step4: "Скопируй распознанный текст"
       },
       features: {
-        title: "\u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u0438",
+        title: "Для повседневного захвата текста с экрана",
         items: {
-          hotkey: {
-            title: "\u0413\u043e\u0440\u044f\u0447\u0430\u044f \u043a\u043b\u0430\u0432\u0438\u0448\u0430",
-            text: "\u0417\u0430\u043f\u0443\u0441\u043a \u0440\u0430\u0441\u043f\u043e\u0437\u043d\u0430\u0432\u0430\u043d\u0438\u044f \u043e\u0434\u043d\u043e\u0439 \u043a\u043e\u043c\u0431\u0438\u043d\u0430\u0446\u0438\u0435\u0439 \u043a\u043b\u0430\u0432\u0438\u0448."
-          },
           region: {
-            title: "\u0412\u044b\u0431\u043e\u0440 \u043e\u0431\u043b\u0430\u0441\u0442\u0438",
-            text: "\u0420\u0430\u0441\u043f\u043e\u0437\u043d\u0430\u0451\u0442\u0441\u044f \u0442\u043e\u043b\u044c\u043a\u043e \u043d\u0443\u0436\u043d\u0430\u044f \u0447\u0430\u0441\u0442\u044c \u044d\u043a\u0440\u0430\u043d\u0430."
+            title: "Выделение области",
+            text: "Распознаётся только нужная часть экрана."
           },
-          copy: {
-            title: "\u041e\u0431\u044b\u0447\u043d\u043e\u0435 \u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435",
-            text: "\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442 \u043c\u043e\u0436\u043d\u043e \u0432\u044b\u0434\u0435\u043b\u0438\u0442\u044c \u0438 \u0441\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u043a\u0430\u043a \u0442\u0435\u043a\u0441\u0442."
+          overlay: {
+            title: "Выделяемый оверлей",
+            text: "TextLayer размещает распознанный текст поверх захваченной области, чтобы его можно было копировать как обычно."
+          },
+          local: {
+            title: "Локальное OCR",
+            text: "OCR работает на вашем компьютере с использованием локальных OCR-движков Windows."
+          },
+          language: {
+            title: "Английский и русский",
+            text: "Интерфейс приложения поддерживает английский и русский языки."
+          },
+          desktop: {
+            title: "Настольная утилита Windows",
+            text: "Работает как обычная Windows-утилита и может оставаться доступной из системного трея."
+          },
+          extension: {
+            title: "Без расширения браузера",
+            text: "Работает с изображениями в Discord, Telegram, браузерах, просмотрщиках изображений и других приложениях."
           }
         }
       },
       privacy: {
-        title: "\u041f\u0440\u0438\u0432\u0430\u0442\u043d\u043e\u0441\u0442\u044c",
-        text: "TextLayer \u0440\u0430\u0441\u043f\u043e\u0437\u043d\u0430\u0451\u0442 \u0442\u0435\u043a\u0441\u0442 \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u043e \u043d\u0430 \u043a\u043e\u043c\u043f\u044c\u044e\u0442\u0435\u0440\u0435. \u0418\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u044f \u043d\u0435 \u043e\u0442\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0442\u0441\u044f \u043d\u0430 \u0441\u0435\u0440\u0432\u0435\u0440, \u043e\u0431\u043b\u0430\u0447\u043d\u0430\u044f \u043e\u0431\u0440\u0430\u0431\u043e\u0442\u043a\u0430 \u0438 \u0442\u0435\u043b\u0435\u043c\u0435\u0442\u0440\u0438\u044f \u043d\u0435 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u044e\u0442\u0441\u044f."
+        title: "Приватность по умолчанию",
+        text: "TextLayer не требует облачного OCR. Захваченные области экрана обрабатываются локально на вашем компьютере.",
+        items: {
+          upload: "Без загрузки изображений",
+          cloud: "Без облачного OCR",
+          telemetry: "Без телеметрии",
+          scanning: "Без постоянного фонового сканирования экрана"
+        },
+        diagramAria: "Схема локальной обработки",
+        diagram: {
+          screen: "Область экрана",
+          ocr: "Локальное OCR",
+          text: "Выделяемый текст"
+        }
+      },
+      technical: {
+        title: "Технические детали",
+        items: {
+          platform: {
+            label: "Платформа",
+            value: "Windows"
+          },
+          runtime: {
+            label: "Среда выполнения",
+            value: ".NET 9"
+          },
+          ui: {
+            label: "Интерфейс",
+            value: "WPF"
+          },
+          ocr: {
+            label: "OCR",
+            value: "Windows OCR и локальный Tesseract OCR"
+          },
+          languages: {
+            label: "Языки",
+            value: "Английский и русский"
+          },
+          distribution: {
+            label: "Распространение",
+            value: "Установщик Windows из GitHub Releases"
+          }
+        }
       },
       download: {
-        title: "\u0421\u043a\u0430\u0447\u0430\u0442\u044c TextLayer",
-        note: "\u0423\u0441\u0442\u0430\u043d\u043e\u0432\u0449\u0438\u043a \u0434\u043b\u044f Windows \u00b7 v0.1.1"
+        title: "Скачать TextLayer для Windows",
+        text: "Установите TextLayer и используйте локальное OCR прямо на рабочем столе.",
+        button: "Скачать TextLayer v0.1.1",
+        buttonAria: "Скачать TextLayer версии 0.1.1",
+        links: {
+          releases: "Релизы GitHub",
+          source: "Исходный код"
+        },
+        note: "Установщик для Windows. OCR-ресурсы уже включены в приложение."
+      },
+      limitations: {
+        title: "Текущие ограничения",
+        items: {
+          one: "Качество OCR зависит от чёткости изображения и размера текста.",
+          two: "Очень плотные интерфейсные скриншоты могут распознаваться хуже.",
+          three: "Автоопределение языка OCR пока экспериментальное.",
+          four: "Захват выполняется для выбранной области экрана за один раз."
+        }
       },
       footer: {
-        text: "TextLayer \u00b7 \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u043e\u0435 \u0440\u0430\u0441\u043f\u043e\u0437\u043d\u0430\u0432\u0430\u043d\u0438\u0435 \u0431\u0435\u0437 \u043e\u0442\u043f\u0440\u0430\u0432\u043a\u0438 \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0439 \u043d\u0430 \u0441\u0435\u0440\u0432\u0435\u0440."
+        text: "Локальная OCR-утилита для Windows.",
+        github: "GitHub",
+        download: "Скачать"
       }
     },
     en: {
       meta: {
-        title: "TextLayer \u2014 local OCR for Windows",
-        description: "TextLayer helps you select and copy text from images on your screen. OCR runs locally on Windows."
+        title: "TextLayer — local OCR for Windows",
+        description: "TextLayer helps you select a screen area, recognize text locally, and copy the result as normal text."
       },
       common: {
         skip: "Skip to content",
+        homeAria: "Go to the top of the TextLayer page",
+        navAria: "Primary navigation",
         languageSwitcher: "Language switcher",
         switchToRu: "Switch language to Russian",
         switchToEn: "Switch language to English",
-        download: "Download for Windows",
+        github: "GitHub",
+        githubAria: "Open the TextLayer repository on GitHub",
+        sourceAria: "Open the TextLayer source code on GitHub",
         downloadAria: "Download TextLayer for Windows"
       },
       lang: {
@@ -82,53 +184,147 @@
         en: "EN"
       },
       brand: {
-        text: "TextLayer"
+        name: "TextLayer",
+        subtitle: "Local OCR for Windows"
+      },
+      nav: {
+        overview: "Overview",
+        features: "Features",
+        privacy: "Privacy",
+        download: "Download"
       },
       hero: {
+        label: "Windows OCR Utility",
         title: "Copy text from images on your screen",
-        subtitle: "Press Ctrl + Shift + O, select an area, and copy recognized text from a clean overlay.",
-        trust: "Local OCR \u00b7 No cloud \u00b7 Windows"
+        text: "TextLayer helps you select a screen area, recognize text locally, and copy the result as normal text.",
+        download: "Download for Windows",
+        github: "View source on GitHub",
+        meta: "Windows · Local OCR · No cloud upload"
       },
-      panel: {
-        title: "Quick workflow",
-        step1: "Ctrl + Shift + O",
-        step2: "Select an area",
-        step3: "Copy text"
+      mockup: {
+        aria: "TextLayer application mockup",
+        menu: {
+          capture: "Capture",
+          ocr: "OCR",
+          settings: "Settings"
+        },
+        heading: "Screen text capture",
+        previewNote: "Selected region",
+        textLabel: "Recognized text",
+        sampleText: "Example text ready to copy",
+        copyButton: "Copy text"
+      },
+      workflow: {
+        step1: "Open an image or screenshot",
+        step2: "Select a screen area",
+        step3: "TextLayer runs local OCR",
+        step4: "Copy the recognized text"
       },
       features: {
-        title: "Features",
+        title: "Built for everyday screen text capture",
         items: {
-          hotkey: {
-            title: "Hotkey",
-            text: "Start recognition with one keyboard shortcut."
-          },
           region: {
             title: "Region capture",
             text: "Recognize only the part of the screen you need."
           },
-          copy: {
-            title: "Normal copying",
-            text: "Select and copy the result like regular text."
+          overlay: {
+            title: "Selectable overlay",
+            text: "TextLayer places recognized text over the captured area so you can copy it normally."
+          },
+          local: {
+            title: "Local OCR",
+            text: "OCR runs on your Windows machine using local OCR engines."
+          },
+          language: {
+            title: "English and Russian",
+            text: "The app UI supports English and Russian."
+          },
+          desktop: {
+            title: "Windows desktop app",
+            text: "Runs as a normal Windows utility and can stay available from the tray."
+          },
+          extension: {
+            title: "No browser extension",
+            text: "Works with images shown in Discord, Telegram, browsers, image viewers, and other apps."
           }
         }
       },
       privacy: {
-        title: "Privacy",
-        text: "TextLayer recognizes text locally on your computer. Images are not uploaded to a server, and there is no cloud processing or telemetry."
+        title: "Private by design",
+        text: "TextLayer does not need cloud OCR. Captured screen regions are processed locally on your computer.",
+        items: {
+          upload: "No image upload",
+          cloud: "No cloud OCR",
+          telemetry: "No telemetry",
+          scanning: "No continuous screen scanning"
+        },
+        diagramAria: "Local processing diagram",
+        diagram: {
+          screen: "Screen region",
+          ocr: "Local OCR",
+          text: "Selectable text"
+        }
+      },
+      technical: {
+        title: "Technical details",
+        items: {
+          platform: {
+            label: "Platform",
+            value: "Windows"
+          },
+          runtime: {
+            label: "Runtime",
+            value: ".NET 9"
+          },
+          ui: {
+            label: "UI",
+            value: "WPF"
+          },
+          ocr: {
+            label: "OCR",
+            value: "Windows OCR and local Tesseract OCR"
+          },
+          languages: {
+            label: "Languages",
+            value: "English and Russian"
+          },
+          distribution: {
+            label: "Distribution",
+            value: "Windows installer from GitHub Releases"
+          }
+        }
       },
       download: {
-        title: "Download TextLayer",
-        note: "Windows installer \u00b7 v0.1.1"
+        title: "Download TextLayer for Windows",
+        text: "Install TextLayer and use local OCR directly from your desktop.",
+        button: "Download TextLayer v0.1.1",
+        buttonAria: "Download TextLayer version 0.1.1",
+        links: {
+          releases: "GitHub Releases",
+          source: "Source code"
+        },
+        note: "Installer for Windows. OCR assets are bundled with the app."
+      },
+      limitations: {
+        title: "Current limitations",
+        items: {
+          one: "OCR quality depends on image clarity and text size.",
+          two: "Very dense UI screenshots may be harder to recognize.",
+          three: "Auto OCR language detection is experimental.",
+          four: "Region capture currently works per selected screen area."
+        }
       },
       footer: {
-        text: "TextLayer \u00b7 local recognition without uploading images to a server."
+        text: "Local OCR utility for Windows.",
+        github: "GitHub",
+        download: "Download"
       }
     }
   };
 
   var textNodes = document.querySelectorAll("[data-i18n]");
-  var titleNodes = document.querySelectorAll("[data-i18n-title]");
   var ariaLabelNodes = document.querySelectorAll("[data-i18n-aria-label]");
+  var titleNodes = document.querySelectorAll("[data-i18n-title]");
   var metaDescription = document.querySelector('meta[name="description"]');
   var languageButtons = document.querySelectorAll(".lang-button");
 
@@ -148,7 +344,7 @@
     }
   }
 
-  function resolveKey(source, key) {
+  function resolveTranslation(source, key) {
     var parts = key.split(".");
     var value = source;
     var index = 0;
@@ -187,15 +383,15 @@
     }
 
     textNodes.forEach(function (node) {
-      node.textContent = resolveKey(dictionary, node.getAttribute("data-i18n"));
-    });
-
-    titleNodes.forEach(function (node) {
-      node.setAttribute("title", resolveKey(dictionary, node.getAttribute("data-i18n-title")));
+      node.textContent = resolveTranslation(dictionary, node.getAttribute("data-i18n"));
     });
 
     ariaLabelNodes.forEach(function (node) {
-      node.setAttribute("aria-label", resolveKey(dictionary, node.getAttribute("data-i18n-aria-label")));
+      node.setAttribute("aria-label", resolveTranslation(dictionary, node.getAttribute("data-i18n-aria-label")));
+    });
+
+    titleNodes.forEach(function (node) {
+      node.setAttribute("title", resolveTranslation(dictionary, node.getAttribute("data-i18n-title")));
     });
 
     languageButtons.forEach(function (button) {
