@@ -319,6 +319,12 @@
   var titleNodes = document.querySelectorAll("[data-i18n-title]");
   var metaDescription = document.querySelector('meta[name="description"]');
   var languageButtons = document.querySelectorAll(".lang-button");
+  var textFallbacks = new WeakMap();
+  var ariaFallbacks = new WeakMap();
+  var titleFallbacks = new WeakMap();
+  var originalDocumentTitle = document.title;
+  var originalMetaDescription = metaDescription ? metaDescription.getAttribute("content") || "" : "";
+  var warnedKeys = Object.create(null);
 
   function getStoredLanguage() {
     try {
@@ -336,21 +342,73 @@
     }
   }
 
-  function resolveTranslation(source, key) {
+  function isNonEmptyString(value) {
+    return typeof value === "string" && value.trim().length > 0;
+  }
+
+  function rememberFallbacks() {
+    textNodes.forEach(function (node) {
+      textFallbacks.set(node, node.textContent);
+    });
+
+    ariaNodes.forEach(function (node) {
+      ariaFallbacks.set(node, node.getAttribute("aria-label"));
+    });
+
+    titleNodes.forEach(function (node) {
+      titleFallbacks.set(node, node.getAttribute("title"));
+    });
+  }
+
+  function warnMissing(language, key, targetType) {
+    var warningId = language + "|" + targetType + "|" + key;
+
+    if (warnedKeys[warningId]) {
+      return;
+    }
+
+    warnedKeys[warningId] = true;
+    console.warn('[TextLayer i18n] Missing or empty "' + targetType + '" translation for "' + key + '" in "' + language + '".');
+  }
+
+  function resolveKey(language, key, targetType) {
+    var dictionary = translations[language];
     var parts = key.split(".");
-    var value = source;
+    var value = dictionary;
     var index = 0;
 
     while (index < parts.length) {
       if (!value || !Object.prototype.hasOwnProperty.call(value, parts[index])) {
-        return "";
+        warnMissing(language, key, targetType);
+        return null;
       }
 
       value = value[parts[index]];
       index += 1;
     }
 
+    if (!isNonEmptyString(value)) {
+      warnMissing(language, key, targetType);
+      return null;
+    }
+
     return value;
+  }
+
+  function applyTextFallback(node) {
+    var fallback = textFallbacks.get(node);
+
+    if (typeof fallback === "string") {
+      node.textContent = fallback;
+    }
+  }
+
+  function applyAttributeFallback(node, attributeName, fallbackMap) {
+    var fallback = fallbackMap.get(node);
+
+    if (typeof fallback === "string") {
+      node.setAttribute(attributeName, fallback);
+    }
   }
 
   function getInitialLanguage() {
@@ -363,27 +421,92 @@
     return DEFAULT_LANGUAGE;
   }
 
+  function auditTranslationCoverage() {
+    var auditTargets = [
+      {
+        nodes: textNodes,
+        attribute: "data-i18n",
+        type: "text"
+      },
+      {
+        nodes: ariaNodes,
+        attribute: "data-i18n-aria-label",
+        type: "aria-label"
+      },
+      {
+        nodes: titleNodes,
+        attribute: "data-i18n-title",
+        type: "title"
+      }
+    ];
+
+    auditTargets.forEach(function (target) {
+      var keys = Object.create(null);
+
+      target.nodes.forEach(function (node) {
+        var key = node.getAttribute(target.attribute);
+
+        if (key) {
+          keys[key] = true;
+        }
+      });
+
+      Object.keys(keys).forEach(function (key) {
+        SUPPORTED_LANGUAGES.forEach(function (language) {
+          resolveKey(language, key, target.type);
+        });
+      });
+    });
+
+    SUPPORTED_LANGUAGES.forEach(function (language) {
+      resolveKey(language, "meta.title", "document.title");
+      resolveKey(language, "meta.description", "meta.description");
+    });
+  }
+
   function applyLanguage(language) {
     var activeLanguage = SUPPORTED_LANGUAGES.indexOf(language) !== -1 ? language : DEFAULT_LANGUAGE;
-    var dictionary = translations[activeLanguage];
+    var title = resolveKey(activeLanguage, "meta.title", "document.title");
+    var description = resolveKey(activeLanguage, "meta.description", "meta.description");
 
     document.documentElement.lang = activeLanguage;
-    document.title = dictionary.meta.title;
+    document.title = title !== null ? title : originalDocumentTitle;
 
     if (metaDescription) {
-      metaDescription.setAttribute("content", dictionary.meta.description);
+      metaDescription.setAttribute("content", description !== null ? description : originalMetaDescription);
     }
 
     textNodes.forEach(function (node) {
-      node.textContent = resolveTranslation(dictionary, node.getAttribute("data-i18n"));
+      var translatedText = resolveKey(activeLanguage, node.getAttribute("data-i18n"), "text");
+
+      if (translatedText !== null) {
+        node.textContent = translatedText;
+        return;
+      }
+
+      applyTextFallback(node);
     });
 
     ariaNodes.forEach(function (node) {
-      node.setAttribute("aria-label", resolveTranslation(dictionary, node.getAttribute("data-i18n-aria-label")));
+      var translatedAria = resolveKey(activeLanguage, node.getAttribute("data-i18n-aria-label"), "aria-label");
+
+      if (translatedAria !== null) {
+        node.setAttribute("aria-label", translatedAria);
+        return;
+      }
+
+      applyAttributeFallback(node, "aria-label", ariaFallbacks);
     });
 
     titleNodes.forEach(function (node) {
-      node.setAttribute("title", resolveTranslation(dictionary, node.getAttribute("data-i18n-title")));
+      var translatedTitle = resolveKey(activeLanguage, node.getAttribute("data-i18n-title"), "title");
+
+      if (translatedTitle !== null) {
+        node.setAttribute("title", translatedTitle);
+        return;
+      }
+
+      applyAttributeFallback(node, "title", titleFallbacks);
     });
 
     languageButtons.forEach(function (button) {
@@ -394,6 +517,9 @@
 
     setStoredLanguage(activeLanguage);
   }
+
+  rememberFallbacks();
+  auditTranslationCoverage();
 
   languageButtons.forEach(function (button) {
     button.addEventListener("click", function () {
