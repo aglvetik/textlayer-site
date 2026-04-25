@@ -1,46 +1,51 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TextLayer — локальное OCR для Windows</title>
+  <title>TextLayer — local OCR for Windows</title>
   <meta
     name="description"
-    content="TextLayer помогает выделять область экрана, распознавать текст локально и копировать результат как обычный текст."
+    content="TextLayer extracts copyable text from screenshots, images, and other non-selectable content on your Windows screen."
   >
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main-content" data-i18n="common.skip">Перейти к содержимому</a>
+  <a class="skip-link" href="#main-content" data-i18n="common.skip">Skip to content</a>
 
   <header class="site-header">
     <div class="container header-bar">
-      <div class="brand-wrap">
-        <a class="brand" href="#overview" aria-label="Перейти к началу страницы TextLayer" data-i18n-aria-label="common.homeAria">
-          <span class="brand-name" data-i18n="brand.name">TextLayer</span>
+      <div class="brand-group">
+        <a
+          class="brand"
+          href="#overview"
+          aria-label="Go to the top of the TextLayer page"
+          data-i18n-aria-label="common.homeAria"
+        >
+          <span data-i18n="brand.name">TextLayer</span>
         </a>
-        <span class="brand-subtitle" data-i18n="brand.subtitle">Локальное OCR для Windows</span>
+        <span class="brand-subtitle" data-i18n="brand.subtitle">Local OCR for Windows</span>
       </div>
 
       <div class="header-controls">
-        <nav class="site-nav" aria-label="Основная навигация" data-i18n-aria-label="common.navAria">
-          <a href="#overview" data-i18n="nav.overview">Обзор</a>
-          <a href="#features" data-i18n="nav.features">Возможности</a>
-          <a href="#privacy" data-i18n="nav.privacy">Приватность</a>
-          <a href="#download" data-i18n="nav.download">Скачать</a>
+        <nav class="site-nav" aria-label="Primary navigation" data-i18n-aria-label="common.navAria">
+          <a href="#overview" data-i18n="nav.overview">Overview</a>
+          <a href="#use-cases" data-i18n="nav.useCases">Use cases</a>
+          <a href="#privacy" data-i18n="nav.privacy">Privacy</a>
+          <a href="#download" data-i18n="nav.download">Download</a>
         </nav>
 
         <div
           class="language-switcher"
           role="group"
-          aria-label="Переключатель языка"
+          aria-label="Language switcher"
           data-i18n-aria-label="common.languageSwitcher"
         >
           <button
             type="button"
             class="lang-button"
             data-lang="ru"
-            aria-label="Переключить язык на русский"
+            aria-label="Switch language to Russian"
             data-i18n="lang.ru"
             data-i18n-aria-label="common.switchToRu"
             aria-pressed="false"
@@ -63,7 +68,7 @@
         <a
           class="button button-secondary button-small"
           href="https://github.com/aglvetik/TextLayer"
-          aria-label="Открыть репозиторий TextLayer на GitHub"
+          aria-label="Open the TextLayer repository on GitHub"
           data-i18n="common.github"
           data-i18n-aria-label="common.githubAria"
         >
@@ -77,138 +82,139 @@
     <section id="overview" class="hero-section">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="hero-label" data-i18n="hero.label">OCR-утилита для Windows</p>
-          <h1 class="hero-title" data-i18n="hero.title">Копируй текст с изображений на экране</h1>
+          <p class="hero-label" data-i18n="hero.label">Windows OCR Utility</p>
+          <h1 class="hero-title" data-i18n="hero.title">Make text inside images usable</h1>
           <p class="hero-text" data-i18n="hero.text">
-            TextLayer помогает выделять область экрана, распознавать текст локально и копировать результат как обычный текст.
+            TextLayer helps you extract copyable text from screenshots, chat images, error dialogs, scanned fragments, and other non-selectable content on your screen.
           </p>
 
           <div class="hero-actions">
             <a
               class="button button-primary"
               href="https://github.com/aglvetik/TextLayer/releases/download/v0.1.1/TextLayer-Setup-0.1.1.exe"
-              aria-label="Скачать TextLayer для Windows"
+              aria-label="Download TextLayer for Windows"
               data-i18n="hero.download"
               data-i18n-aria-label="common.downloadAria"
             >
-              Скачать для Windows
+              Download for Windows
             </a>
             <a
               class="button button-secondary"
               href="https://github.com/aglvetik/TextLayer"
-              aria-label="Открыть исходный код TextLayer на GitHub"
+              aria-label="View TextLayer on GitHub"
               data-i18n="hero.github"
               data-i18n-aria-label="common.sourceAria"
             >
-              Посмотреть исходный код
+              View on GitHub
             </a>
           </div>
 
-          <p class="hero-meta" data-i18n="hero.meta">Windows · Локальное OCR · Без загрузки в облако</p>
+          <p class="hero-trust" data-i18n="hero.trust">Local processing · No cloud OCR · No telemetry</p>
         </div>
 
-        <div class="mockup-window" aria-label="Макет приложения TextLayer" data-i18n-aria-label="mockup.aria">
-          <div class="mockup-titlebar">
-            <span class="mockup-title" data-i18n="brand.name">TextLayer</span>
-            <span class="mockup-controls" aria-hidden="true">
+        <div class="product-window" aria-label="TextLayer product preview" data-i18n-aria-label="mockup.aria">
+          <div class="window-titlebar">
+            <span class="window-title" data-i18n="brand.name">TextLayer</span>
+            <span class="window-controls" aria-hidden="true">
               <span></span>
               <span></span>
               <span></span>
             </span>
           </div>
 
-          <div class="mockup-body">
-            <aside class="mockup-sidebar">
-              <div class="mockup-menu-item is-active" data-i18n="mockup.menu.capture">Захват</div>
-              <div class="mockup-menu-item" data-i18n="mockup.menu.ocr">OCR</div>
-              <div class="mockup-menu-item" data-i18n="mockup.menu.settings">Настройки</div>
-            </aside>
-
-            <div class="mockup-main">
-              <h2 class="mockup-heading" data-i18n="mockup.heading">Захват текста с экрана</h2>
-
-              <div class="capture-preview">
-                <div class="selection-box" aria-hidden="true"></div>
-                <div class="preview-note" data-i18n="mockup.previewNote">Выбранная область</div>
+          <div class="window-content">
+            <div class="window-pane">
+              <p class="pane-label" data-i18n="mockup.imageLabel">Image text</p>
+              <div class="image-preview">
+                <div class="preview-bar preview-bar-one"></div>
+                <div class="preview-bar preview-bar-two"></div>
+                <div class="preview-bar preview-bar-three"></div>
+                <div class="preview-highlight preview-highlight-one"></div>
+                <div class="preview-highlight preview-highlight-two"></div>
+                <div class="preview-footer" data-i18n="mockup.previewCaption">Visible text in screenshots and app windows</div>
               </div>
+            </div>
 
-              <div class="recognized-box">
-                <p class="recognized-label" data-i18n="mockup.textLabel">Распознанный текст</p>
-                <p class="recognized-text" data-i18n="mockup.sampleText">Пример текста готов к копированию</p>
+            <div class="window-pane window-pane-text">
+              <p class="pane-label" data-i18n="mockup.textLabel">Extracted text</p>
+              <div class="text-preview">
+                <p data-i18n="mockup.line1">Server connection failed</p>
+                <p data-i18n="mockup.line2">Please retry the request</p>
+                <p data-i18n="mockup.line3">Copyable output is ready</p>
               </div>
-
-              <span class="mockup-copy-button" data-i18n="mockup.copyButton">Копировать текст</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="workflow" class="workflow-strip">
+    <section class="section value-section">
       <div class="container">
-        <ol class="workflow-list">
-          <li>
-            <span class="workflow-number">1</span>
-            <span data-i18n="workflow.step1">Открой изображение или скриншот</span>
-          </li>
-          <li>
-            <span class="workflow-number">2</span>
-            <span data-i18n="workflow.step2">Выдели область экрана</span>
-          </li>
-          <li>
-            <span class="workflow-number">3</span>
-            <span data-i18n="workflow.step3">TextLayer выполнит локальное OCR</span>
-          </li>
-          <li>
-            <span class="workflow-number">4</span>
-            <span data-i18n="workflow.step4">Скопируй распознанный текст</span>
-          </li>
-        </ol>
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="value.title">Why TextLayer exists</h2>
+        </div>
+
+        <div class="value-layout">
+          <article class="value-block value-block-wide">
+            <h3 data-i18n="value.blocks.selection.title">Copy text where apps do not allow selection</h3>
+            <p data-i18n="value.blocks.selection.text">Useful for screenshots, messengers, launchers, game UI, support dialogs, and images opened in other apps.</p>
+          </article>
+
+          <article class="value-block value-block-highlight">
+            <h3 data-i18n="value.blocks.local.title">Keep recognition local</h3>
+            <p data-i18n="value.blocks.local.text">Captured regions are processed on your Windows machine instead of being sent to an online OCR service.</p>
+          </article>
+
+          <article class="value-block value-block-note">
+            <h3 data-i18n="value.blocks.utility.title">Use it as a desktop utility</h3>
+            <p data-i18n="value.blocks.utility.text">TextLayer is designed as a small Windows tool that stays available when you need to work with visual text.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section id="features" class="section">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" data-i18n="features.title">Для повседневного захвата текста с экрана</h2>
+    <section id="use-cases" class="section use-cases-section">
+      <div class="container use-cases-grid">
+        <div class="use-cases-list-wrap">
+          <h2 class="section-title" data-i18n="useCases.title">Where it helps</h2>
+          <ul class="use-cases-list">
+            <li data-i18n="useCases.items.one">Screenshots with text</li>
+            <li data-i18n="useCases.items.two">Discord or Telegram images</li>
+            <li data-i18n="useCases.items.three">Error messages and logs shown in screenshots</li>
+            <li data-i18n="useCases.items.four">Game UI or server information screenshots</li>
+            <li data-i18n="useCases.items.five">Scanned fragments and document previews</li>
+            <li data-i18n="useCases.items.six">Text inside browser images</li>
+          </ul>
         </div>
 
-        <div class="feature-grid">
-          <article class="feature-card">
-            <span class="feature-icon feature-icon-region" aria-hidden="true"></span>
-            <h3 data-i18n="features.items.region.title">Выделение области</h3>
-            <p data-i18n="features.items.region.text">Распознаётся только нужная часть экрана.</p>
-          </article>
+        <div class="use-cases-copy">
+          <p class="use-cases-text" data-i18n="useCases.text">
+            TextLayer is for moments when text is visible, but not selectable. Instead of retyping it manually, you can extract it locally and paste it where you need.
+          </p>
+        </div>
+      </div>
+    </section>
 
-          <article class="feature-card">
-            <span class="feature-icon feature-icon-overlay" aria-hidden="true"></span>
-            <h3 data-i18n="features.items.overlay.title">Выделяемый оверлей</h3>
-            <p data-i18n="features.items.overlay.text">TextLayer размещает распознанный текст поверх захваченной области, чтобы его можно было копировать как обычно.</p>
-          </article>
+    <section class="section details-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="details.title">What TextLayer does</h2>
+        </div>
 
-          <article class="feature-card">
-            <span class="feature-icon feature-icon-local" aria-hidden="true"></span>
-            <h3 data-i18n="features.items.local.title">Локальное OCR</h3>
-            <p data-i18n="features.items.local.text">OCR работает на вашем компьютере с использованием локальных OCR-движков Windows.</p>
-          </article>
+        <div class="details-grid">
+          <div class="details-list">
+            <div class="detail-item" data-i18n="details.items.one">Region-based capture</div>
+            <div class="detail-item" data-i18n="details.items.two">Selectable result overlay</div>
+            <div class="detail-item" data-i18n="details.items.three">Local Windows OCR</div>
+            <div class="detail-item" data-i18n="details.items.four">Local Tesseract OCR</div>
+            <div class="detail-item" data-i18n="details.items.five">English and Russian interface</div>
+            <div class="detail-item" data-i18n="details.items.six">Windows installer</div>
+          </div>
 
-          <article class="feature-card">
-            <span class="feature-icon feature-icon-language" aria-hidden="true"></span>
-            <h3 data-i18n="features.items.language.title">Английский и русский</h3>
-            <p data-i18n="features.items.language.text">Интерфейс приложения поддерживает английский и русский языки.</p>
-          </article>
-
-          <article class="feature-card">
-            <span class="feature-icon feature-icon-desktop" aria-hidden="true"></span>
-            <h3 data-i18n="features.items.desktop.title">Настольная утилита Windows</h3>
-            <p data-i18n="features.items.desktop.text">Работает как обычная Windows-утилита и может оставаться доступной из системного трея.</p>
-          </article>
-
-          <article class="feature-card">
-            <span class="feature-icon feature-icon-extension" aria-hidden="true"></span>
-            <h3 data-i18n="features.items.extension.title">Без расширения браузера</h3>
-            <p data-i18n="features.items.extension.text">Работает с изображениями в Discord, Telegram, браузерах, просмотрщиках изображений и других приложениях.</p>
-          </article>
+          <aside class="details-note">
+            <p class="details-note-label" data-i18n="details.noteLabel">Technical note</p>
+            <p class="details-note-text" data-i18n="details.noteText">Default capture hotkey: Ctrl+Shift+O</p>
+          </aside>
         </div>
       </div>
     </section>
@@ -216,25 +222,25 @@
     <section id="privacy" class="section privacy-section">
       <div class="container privacy-grid">
         <div class="privacy-copy">
-          <h2 class="section-title" data-i18n="privacy.title">Приватность по умолчанию</h2>
+          <h2 class="section-title" data-i18n="privacy.title">Private by default</h2>
           <p class="section-text" data-i18n="privacy.text">
-            TextLayer не требует облачного OCR. Захваченные области экрана обрабатываются локально на вашем компьютере.
+            TextLayer does not upload captured images to a server. Recognition runs locally on your computer.
           </p>
 
           <ul class="privacy-list">
-            <li data-i18n="privacy.items.upload">Без загрузки изображений</li>
-            <li data-i18n="privacy.items.cloud">Без облачного OCR</li>
-            <li data-i18n="privacy.items.telemetry">Без телеметрии</li>
-            <li data-i18n="privacy.items.scanning">Без постоянного фонового сканирования экрана</li>
+            <li data-i18n="privacy.items.cloud">No cloud OCR</li>
+            <li data-i18n="privacy.items.telemetry">No telemetry</li>
+            <li data-i18n="privacy.items.extension">No browser extension</li>
+            <li data-i18n="privacy.items.scanning">No continuous screen-scanning loop</li>
           </ul>
         </div>
 
-        <div class="privacy-diagram" aria-label="Схема локальной обработки" data-i18n-aria-label="privacy.diagramAria">
-          <div class="diagram-node" data-i18n="privacy.diagram.screen">Область экрана</div>
+        <div class="privacy-diagram" aria-label="Local processing flow" data-i18n-aria-label="privacy.diagramAria">
+          <div class="diagram-node" data-i18n="privacy.diagram.screen">Screen region</div>
           <div class="diagram-arrow" aria-hidden="true">→</div>
-          <div class="diagram-node" data-i18n="privacy.diagram.ocr">Локальное OCR</div>
+          <div class="diagram-node" data-i18n="privacy.diagram.ocr">Local OCR</div>
           <div class="diagram-arrow" aria-hidden="true">→</div>
-          <div class="diagram-node" data-i18n="privacy.diagram.text">Выделяемый текст</div>
+          <div class="diagram-node" data-i18n="privacy.diagram.text">Copyable text</div>
         </div>
       </div>
     </section>
@@ -242,33 +248,29 @@
     <section class="section technical-section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title" data-i18n="technical.title">Технические детали</h2>
+          <h2 class="section-title" data-i18n="technical.title">Technical base</h2>
         </div>
 
         <dl class="technical-list">
           <div class="technical-row">
-            <dt data-i18n="technical.items.platform.label">Платформа</dt>
+            <dt data-i18n="technical.items.platform.label">Platform</dt>
             <dd data-i18n="technical.items.platform.value">Windows</dd>
           </div>
           <div class="technical-row">
-            <dt data-i18n="technical.items.runtime.label">Среда выполнения</dt>
-            <dd data-i18n="technical.items.runtime.value">.NET 9</dd>
+            <dt data-i18n="technical.items.stack.label">App stack</dt>
+            <dd data-i18n="technical.items.stack.value">C#, .NET 9, WPF</dd>
           </div>
           <div class="technical-row">
-            <dt data-i18n="technical.items.ui.label">Интерфейс</dt>
-            <dd data-i18n="technical.items.ui.value">WPF</dd>
+            <dt data-i18n="technical.items.ocr.label">OCR engines</dt>
+            <dd data-i18n="technical.items.ocr.value">Windows OCR and local Tesseract OCR</dd>
           </div>
           <div class="technical-row">
-            <dt data-i18n="technical.items.ocr.label">OCR</dt>
-            <dd data-i18n="technical.items.ocr.value">Windows OCR и локальный Tesseract OCR</dd>
+            <dt data-i18n="technical.items.distribution.label">Distribution</dt>
+            <dd data-i18n="technical.items.distribution.value">GitHub Releases installer</dd>
           </div>
           <div class="technical-row">
-            <dt data-i18n="technical.items.languages.label">Языки</dt>
-            <dd data-i18n="technical.items.languages.value">Английский и русский</dd>
-          </div>
-          <div class="technical-row">
-            <dt data-i18n="technical.items.distribution.label">Распространение</dt>
-            <dd data-i18n="technical.items.distribution.value">Установщик Windows из GitHub Releases</dd>
+            <dt data-i18n="technical.items.languages.label">Languages</dt>
+            <dd data-i18n="technical.items.languages.value">English and Russian</dd>
           </div>
         </dl>
       </div>
@@ -276,41 +278,38 @@
 
     <section id="download" class="download-section">
       <div class="container download-inner">
-        <h2 class="download-title" data-i18n="download.title">Скачать TextLayer для Windows</h2>
-        <p class="download-text" data-i18n="download.text">
-          Установите TextLayer и используйте локальное OCR прямо на рабочем столе.
-        </p>
+        <h2 class="download-title" data-i18n="download.title">Download TextLayer</h2>
+        <p class="download-text" data-i18n="download.text">Windows installer for TextLayer v0.1.1.</p>
 
         <a
           class="button button-download"
           href="https://github.com/aglvetik/TextLayer/releases/download/v0.1.1/TextLayer-Setup-0.1.1.exe"
-          aria-label="Скачать TextLayer версии 0.1.1"
+          aria-label="Download TextLayer version 0.1.1"
           data-i18n="download.button"
           data-i18n-aria-label="download.buttonAria"
         >
-          Скачать TextLayer v0.1.1
+          Download TextLayer v0.1.1
         </a>
 
-        <div class="download-links">
-          <a href="https://github.com/aglvetik/TextLayer/releases" data-i18n="download.links.releases">Релизы GitHub</a>
-          <a href="https://github.com/aglvetik/TextLayer" data-i18n="download.links.source">Исходный код</a>
-        </div>
+        <p class="download-source">
+          <a href="https://github.com/aglvetik/TextLayer" data-i18n="download.source">Source code on GitHub</a>
+        </p>
 
-        <p class="download-note" data-i18n="download.note">Установщик для Windows. OCR-ресурсы уже включены в приложение.</p>
+        <p class="download-note" data-i18n="download.note">OCR assets are bundled with the app.</p>
       </div>
     </section>
 
     <section class="section limitations-section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title" data-i18n="limitations.title">Текущие ограничения</h2>
+          <h2 class="section-title" data-i18n="limitations.title">Current limitations</h2>
         </div>
 
         <ul class="limitations-list">
-          <li data-i18n="limitations.items.one">Качество OCR зависит от чёткости изображения и размера текста.</li>
-          <li data-i18n="limitations.items.two">Очень плотные интерфейсные скриншоты могут распознаваться хуже.</li>
-          <li data-i18n="limitations.items.three">Автоопределение языка OCR пока экспериментальное.</li>
-          <li data-i18n="limitations.items.four">Захват выполняется для выбранной области экрана за один раз.</li>
+          <li data-i18n="limitations.items.one">OCR quality depends on image clarity and text size.</li>
+          <li data-i18n="limitations.items.two">Dense UI screenshots can be harder to recognize.</li>
+          <li data-i18n="limitations.items.three">Auto language detection is experimental.</li>
+          <li data-i18n="limitations.items.four">Region capture is currently selected-area based.</li>
         </ul>
       </div>
     </section>
@@ -318,14 +317,11 @@
 
   <footer class="site-footer">
     <div class="container footer-bar">
-      <div class="footer-copy">
-        <p class="footer-brand" data-i18n="brand.name">TextLayer</p>
-        <p class="footer-text" data-i18n="footer.text">Локальная OCR-утилита для Windows.</p>
-      </div>
+      <p class="footer-text" data-i18n="footer.text">TextLayer — local OCR utility for Windows.</p>
 
       <div class="footer-links">
         <a href="https://github.com/aglvetik/TextLayer" data-i18n="footer.github">GitHub</a>
-        <a href="https://github.com/aglvetik/TextLayer/releases/download/v0.1.1/TextLayer-Setup-0.1.1.exe" data-i18n="footer.download">Скачать</a>
+        <a href="https://github.com/aglvetik/TextLayer/releases/download/v0.1.1/TextLayer-Setup-0.1.1.exe" data-i18n="footer.download">Download</a>
       </div>
     </div>
   </footer>
